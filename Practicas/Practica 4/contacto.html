@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>Formulario de contacto</h1>
-	<form>
+	<form action="contacto.html" method="post">
 		<p>
 			<label for="nombre">Nombre</label>
 			<input type="text" name="nombre" value="" id="nombre"/>
@@ -20,7 +20,7 @@
 		</p>
 		<p>
 			<label for="motivo">Motivo de contacto</label>
-			<select>
+			<select name="motivo" id="motivo">
 				<option value="informacion">Informaci&oacute;n general</option>
 				<option value="cotizacion">Cotizaci&oacute;n para proyectos</option>
 				<option value="troleo">Troleo</option>
@@ -31,7 +31,7 @@
 			<label for="comentarios">Comentarios</label>
 		</p>		
 		<p>
-			<textarea rows="8" cols="40"></textarea>
+			<textarea name="comentarios" id="comentarios" rows="8" cols="40"></textarea>
 		</p>			
 		<p>
 			<button type="reset">Limpiar formulario</button>
