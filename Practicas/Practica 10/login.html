@@ -6,11 +6,11 @@
 	<meta name="author" content="Fer Perales" />
 	<meta name="keywords" content="html5, ejemplo, practicas, programacion web, CC422"/>
 	<title>Pr&aacute;ctica 5 :: Formulario de inicio de sesi&oacute;n</title>
-	<script src="validaciones.js"></script>
+	<script src="js/validacionesLogin.js"></script>
 </head>
 <body>
 	<h1>Escriba sus datos de inicio de sesi&oacute;n</h1>
-	<form action="login.html" method="get">
+	<form action="login.html" method="get" name="login">
 		<p>
 			<label for="nick">Nombre de usuario</label>
 			<input type="text" name="nick" id="nick" required/>
@@ -28,7 +28,7 @@
 			<input type="password" name="confirmacion" id="confirmacion" required/>
 		</p>
 		<p>
-			<button type="submit" >Iniciar sesi&oacute;n</button>
+			<button type="submit" id="enviar">Iniciar sesi&oacute;n</button>
 			<button type="reset">Limpiar</button>
 		</p>		
 	</form>
