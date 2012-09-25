@@ -3,10 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Pr&aacute;tica 6 :: Formulario de registro</title>
+	<script src="js/validacionesRegistro.js"></script>
 </head>
 <body>
 	<h1>Formulario de registro</h1>
-	<form action="registro.html" method="get">	
+	<form action="registro.html" method="get" name="registro">	
 		<fieldset>	
 			<p>
 				<label for="correo">Correo</label>
@@ -17,12 +18,12 @@
 				<input type="text" name="usuario" id="usuario" value="Random Guy" disabled/>
 			</p>
 		</fieldset>
-		<fieldset>
+		<fieldset id="razones">
 			<label for="razon">Selecciona tus razones para suscribirte</label>	
-				<p><input name="razon" type="checkbox" value="miembro">Soy miembro del grupo</p>
-				<p><input name="razon" type="checkbox" value="gustaria">Me gustar&iacute;a ser miembro del grupo</p>
-				<p><input name="razon" type="checkbox" value="invitacion">Tengo una invitaci&oacute;n a unirme</p>
-				<p><input name="razon" type="checkbox" value="referido">Soy amigo/amiga de un miembro</p>					
+				<p><input name="razonMiembro" type="checkbox" value="miembro">Soy miembro del grupo</p>
+				<p><input name="razonGustaria" type="checkbox" value="gustaria">Me gustar&iacute;a ser miembro del grupo</p>
+				<p><input name="razonInvitacion" type="checkbox" value="invitacion">Tengo una invitaci&oacute;n a unirme</p>
+				<p><input name="razonReferido" type="checkbox" value="referido">Soy amigo/amiga de un miembro</p>					
 			<p>
 				<label for="foto">Selecciona tu foto de perfil</label>
 				<input type="file" name="foto" id="foto" accept="image/*"/ >		
@@ -52,12 +53,12 @@
 			<p>
 				<label for="sexo">Sexo</label>
 			</p>
-			<p><input type="radio" value="masculino" name="sexo" id="masculino">Masculino</p>
+			<p><input type="radio" value="masculino" name="sexo" id="masculino" checked>Masculino</p>
 			<p><input type="radio" value="femenino" name="sexo" id="femenino">Femenino</p>			
 		</fieldset>
 		<p>
 			<button type="reset">Limpiar</button>
-			<button type="submit">Enviar</button>
+			<button type="submit" id="enviar">Enviar</button>
 		</p>
 	</form>
 </body>
