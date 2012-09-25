@@ -7,16 +7,16 @@ window.onload = function(){
 		var regexEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 		
 		if(form.nick.value.length == 0){
-			alert("Nombre de usuario vac&iacute;o");
+			alert("Nombre de usuario vacío");
 			form.nick.focus();
 		}else if (!regexEmail.test(form.mail.value)){
-			alert("Formato de correo no v&aacute;lido");
+			alert("Formato de correo no válido");
 			form.mail.focus();
 		}else if (form.password.value.length == 0){
-			alert("No puedes dejar el campo de contrase&ntilde;a vac&iacute;o");
+			alert("No puedes dejar el campo de contraseña vacío");
 			form.password.focus();	
 		}else if (form.password.value != form.confirmacion.value){
-			alert("Las contrase&ntilde;as no coinciden");
+			alert("Las contraseñas no coinciden");
 			form.confirmacion.focus();
 		}else{
 			form.submit();
