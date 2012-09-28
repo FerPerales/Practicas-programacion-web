@@ -1,0 +1,11 @@
+.error {
+	color: red;
+	visibility: hidden;
+	display: inline;
+}
+
+label {
+	display: block;
+}
+
+
