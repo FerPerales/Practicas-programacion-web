@@ -7,26 +7,28 @@
 	<meta name="keywords" content="html5, ejemplo, practicas, programacion web, CC422"/>
 	<title>Pr&aacute;ctica 5 :: Formulario de inicio de sesi&oacute;n</title>
 	<script src="js/validacionesLogin.js"></script>
+	<link rel="stylesheet" href="css/login.css" type="text/css"/>
 </head>
 <body>
 	<h1>Escriba sus datos de inicio de sesi&oacute;n</h1>
 	<form action="login.html" method="get" name="login">
-		<p>
+		
 			<label for="nick">Nombre de usuario</label>
-			<input type="text" name="nick" id="nick" required/>
-		</p>
-		<p>
+			<input type="text" name="nick" id="nick" required pattern="/([a-zA-Z]\w*){6,}/"/>
+			<div id="error_nick" class="error">El nombre de usuario debe tener al menos 6 caracteres alfanum&eacute;rico</div>
+		
 			<label for="mail">Correo electr&oacute;nico</label>
-			<input type="email" name="mail" id="mail" placeholder="ejemplo@dominio.com" required/>
-		</p>
-		<p>
+			<input type="email" name="mail" id="mail" placeholder="ejemplo@dominio.com" required pattern="/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/"/>
+			<div id="error_mail" class="error">Debes ingresar un correo electr&oacute;nico v&aacute;lido</div>
+		
 			<label for="password">Contrase&ntilde;a</label>
-			<input type="password" name="password" id="password" required/>
-		</p>
-		<p>
+			<input type="password" name="password" id="password" required pattern="/\w{6,}/"/>
+			<div id="error_pass" class="error">Tu contrase&ntilde;a debe tener al menos 6 caracteres</div>
+		
 			<label for="confirmacion">Confirme su contrase&ntilde;a</label>
 			<input type="password" name="confirmacion" id="confirmacion" required/>
-		</p>
+			<div id="error_confirmacion" class="error">Las contrase&ntilde;as no coinciden</div>
+	
 		<p>
 			<button type="submit" id="enviar">Iniciar sesi&oacute;n</button>
 			<button type="reset">Limpiar</button>

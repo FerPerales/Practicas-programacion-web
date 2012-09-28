@@ -1,25 +1,63 @@
 window.onload = function(){
-	document.getElementById("enviar").onclick = validar;	
+	document.getElementById("enviar").onclick = validar;
+	
+	function cambiarEstadoError(element, value){		
+		//document.getElementById(element).style.display=value;	
+		
+		document.getElementById(element).style.visibility=value;	
+		
+	}	
 
-	function validar () {
+	function validar (){
 		
 		var form = document.login;
 		var regexEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		var regexNick = /([a-zA-Z]\w*){6,}/;
+		var regexPass = /([a-zA-Z]\w*){8,}/;
+		var esValido = true;
 		
-		if(form.nick.value.length == 0){
-			alert("Nombre de usuario vacío");
+		//Validación de nombre de usuario
+		if(!regexNick.test(form.nick.value)){	
 			form.nick.focus();
-		}else if (!regexEmail.test(form.mail.value)){
-			alert("Formato de correo no válido");
-			form.mail.focus();
-		}else if (form.password.value.length == 0){
-			alert("No puedes dejar el campo de contraseña vacío");
-			form.password.focus();	
-		}else if (form.password.value != form.confirmacion.value){
-			alert("Las contraseñas no coinciden");
-			form.confirmacion.focus();
+			esValido = false;        			
+			cambiarEstadoError("error_nick",'visible');
+	    }else{
+	        cambiarEstadoError("error_nick",'hidden');	        		
+	    }		
+			
+		//Validación de email	
+		if (!regexEmail.test(form.mail.value)){
+		   	form.mail.focus();
+		   	esValido = false;
+			cambiarEstadoError("error_mail",'visible');
 		}else{
-			form.submit();
-		}	  
+			cambiarEstadoError("error_mail",'hidden');
+		}
+		
+		
+		//Validacion contraseña
+		if (!regexPass.test(form.password.value)){		
+		   	form.password.focus();	
+		   	esValido = false;
+			cambiarEstadoError("error_pass",'visible');
+		}else{			
+			cambiarEstadoError("error_pass",'hidden');
+		}
+			
+		//Validar confirmacion
+		if (form.password.value != form.confirmacion.value){			
+			form.confirmacion.focus();
+			esValido = false;		
+			cambiarEstadoError("error_confirmacion",'visible');
+		}else{			
+			cambiarEstadoError("error_confirmacion",'hidden');
+		}
+			
+		if(esValido){
+			form.submit();	
+		}else{
+			//Nada
+		}
+			  
 	}
 }
