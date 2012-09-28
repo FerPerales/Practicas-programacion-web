@@ -2,7 +2,7 @@ window.onload = function(){
 	document.getElementById("enviar").onclick = validar;
 	
 	function cambiarEstadoError(element, value){		
-		document.getElementById(element).style.visibility=value;			
+		document.getElementById(element).style.visibility=value;		
 	}	
 
 	function validar (){
