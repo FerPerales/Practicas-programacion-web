@@ -2,10 +2,7 @@ window.onload = function(){
 	document.getElementById("enviar").onclick = validar;
 	
 	function cambiarEstadoError(element, value){		
-		//document.getElementById(element).style.display=value;	
-		
-		document.getElementById(element).style.visibility=value;	
-		
+		document.getElementById(element).style.visibility=value;			
 	}	
 
 	function validar (){
@@ -54,7 +51,7 @@ window.onload = function(){
 		}
 			
 		if(esValido){
-			form.submit();	
+			form.enviarFormulario.click();
 		}else{
 			//Nada
 		}
