@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description"  content="Pagina principal de la practica 5"/>
+	<meta name="author" content="Fer Perales" />
+	<meta name="keywords" content="html5, ejemplo, practicas, programacion web, CC422"/>
+	<title>Pr&aacute;ctica 5 :: Formulario de inicio de sesi&oacute;n</title>
+	<script src="js/validacionesLogin.js"></script>
+	<link rel="stylesheet" href="css/login.css" type="text/css"/>
+</head>
+<body>
+	<h1>Escriba sus datos de inicio de sesi&oacute;n</h1>
+	<form action="login.html" method="get" name="login">
+		
+			<label for="nick">Nombre de usuario</label>
+			<input type="text" name="nick" id="nick" required />
+			<div id="error_nick" class="error">El nombre de usuario debe tener al menos 6 caracteres alfanum&eacute;rico</div>
+		
+			<label for="mail">Correo electr&oacute;nico</label>
+			<input type="email" name="mail" id="mail" placeholder="ejemplo@dominio.com" required/>
+			<div id="error_mail" class="error">Debes ingresar un correo electr&oacute;nico v&aacute;lido</div>
+		
+			<label for="password">Contrase&ntilde;a</label>
+			<input type="password" name="password" id="password" required pattern="/\w{6,}/"/>
+			<div id="error_pass" class="error">Tu contrase&ntilde;a debe tener al menos 6 caracteres</div>
+		
+			<label for="confirmacion">Confirme su contrase&ntilde;a</label>
+			<input type="password" name="confirmacion" id="confirmacion" required/>
+			<div id="error_confirmacion" class="error">Las contrase&ntilde;as no coinciden</div>	
+		<p>
+			<button type="button" id="enviar">Iniciar sesi&oacute;n</button>
+			<button type="submit" id="enviarFormulario"></button>
+		</p>		
+	</form>
+</body>
+</html>
