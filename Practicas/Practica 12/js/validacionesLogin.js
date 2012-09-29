@@ -9,8 +9,8 @@ window.onload = function(){
 		
 		var form = document.login;
 		var regexEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-		var regexNick = /([a-zA-Z]\w*){6,}/;
-		var regexPass = /([a-zA-Z]\w*){8,}/;
+		var regexNick = /\w{6,}/;
+		var regexPass = /\w{8,}/;
 		var esValido = true;
 		
 		//Validación de nombre de usuario
@@ -51,7 +51,14 @@ window.onload = function(){
 		}
 			
 		if(esValido){
+
+			var pass = form.password.value;
+			form.password.value = "";
+			pass = md5(pass);
+			form.password.value = pass;
+			form.confirmacion.value = pass;
 			form.enviarFormulario.click();
+						
 		}else{
 			//Nada
 		}
