@@ -4,6 +4,10 @@
 	<meta charset="UTF-8">
 	<title>Pr&aacute;tica 6 :: Formulario de registro</title>
 	<script src="js/validacionesRegistro.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="css/jquery-ui.css" />
+
 </head>
 <body>
 	<h1>Formulario de registro</h1>
@@ -48,7 +52,7 @@
 			</p>
 			<p>
 				<label for="nacimiento">Fecha de nacimiento</label>
-				<input type="date" name="nacimiento" id="nacimiento" required/>
+				<input type="text" name="nacimiento"*/ id="datepicker" required></div>
 			</p>
 			<p>
 				<label for="sexo">Sexo</label>
@@ -61,5 +65,11 @@
 			<button type="submit" id="enviar">Enviar</button>
 		</p>
 	</form>
+	
+	<script>
+		$(document).ready(function() {
+		  $("#datepicker").datepicker();
+		});
+	</script>
 </body>
 </html>
