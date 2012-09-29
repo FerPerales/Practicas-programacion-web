@@ -18,7 +18,7 @@ window.onload = function(){
 			alert("No puedes dejar el campo de dirección vacío");
 		}else if(form.telefono.value.length == 0){
 			alert("No puedes dejar el campo de teléfono vacío");			
-		}else if(form.nacimiento.value.length == 0){
+		}else if(form.datepicker.value.length == 0){
 			alert("No puedes dejar el campo de fecha vacío");
 		}else{
 			form.submit();
