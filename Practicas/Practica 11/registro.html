@@ -14,62 +14,50 @@
 	<h1>Formulario de registro</h1>
 	<form action="registro.html" method="get" name="registro">	
 		<fieldset>	
-			<p>
 				<label for="correo">Correo</label>
 				<input type="email" name="correo" id="correo" value="ejemplo@dominio.com" disabled/>		
-			</p>
-			<p>
 				<label for="usuario">Usuario</label>
 				<input type="text" name="usuario" id="usuario" value="Random Guy" disabled/>
-				
-			</p>
 		</fieldset>
 		<fieldset id="razones">
 			<label for="razon">Selecciona tus razones para suscribirte</label>	
-				<p><input name="razonMiembro" type="checkbox" value="miembro">Soy miembro del grupo</p>
-				<p><input name="razonGustaria" type="checkbox" value="gustaria">Me gustar&iacute;a ser miembro del grupo</p>
-				<p><input name="razonInvitacion" type="checkbox" value="invitacion">Tengo una invitaci&oacute;n a unirme</p>
-				<p><input name="razonReferido" type="checkbox" value="referido">Soy amigo/amiga de un miembro</p>		
+				<input name="razonMiembro" type="checkbox" value="miembro">Soy miembro del grupo
+				<input name="razonGustaria" type="checkbox" value="gustaria">Me gustar&iacute;a ser miembro del grupo
+				<input name="razonInvitacion" type="checkbox" value="invitacion">Tengo una invitaci&oacute;n a unirme
+				<input name="razonReferido" type="checkbox" value="referido">Soy amigo/amiga de un miembro				
 				<div id="error_razones" class="error">Debes seleccionar al menos una raz&oacute;n para suscribirte</div>
-					
-			<p>
+
 				<label for="foto">Selecciona tu foto de perfil</label>
 				<input type="file" name="foto" id="foto" accept="image/*"/ >	
 				<div id="error_foto" class="error">Por favor selecciona una imagen para tu perfil</div>
-			
-			</p>
-			<p>
+
 				<label for="password">Escribe tu contrase&ntilde;a</label>
 				<input type="password" name="password" id="password" required/>
-				<div id="error_pass" class="error">Tu contrase&ntilde;a debe tener al menos 6 caracteres</div>
-			</p>
+				<div id="error_password" class="error">Tu contrase&ntilde;a debe tener al menos 6 caracteres</div>
+
 		</fieldset>
 		<fieldset>
-			<p>
+
 				<label for="nombre">Nombre completo</label>
 				<input type="text" name="nombre" id="nombre" required/>
 				<div id="error_nombre" class="error">Este campo no puede estar vac&iacute;o</div>
-			</p>
-			<p>
+
 				<label for="direccion">Direcci&oacute;n</label>
 				<input type="text" name="direccion" id="direccion" required/>
 				<div id="error_direccion" class="error">Este campo no puede estar vac&iacute;o</div>
-			</p>		
-			<p>
+
 				<label for="telefono">Tel&eacute;fono</label>
 				<input type="tel" name="telefono" id="telefono" required/>
 				<div id="error_telefono" class="error">Este campo no puede estar vac&iacute;o</div>
-			</p>
-			<p>
+
 				<label for="nacimiento">Fecha de nacimiento</label>
 				<input type="text" name="nacimiento"*/ id="datepicker" required></div>
-				<div id="error_nombre" class="error">Selecciona tu fecha de nacimiento usando el calendario</div>
-			</p>
-			<p>
+				<div id="error_nacimiento" class="error">Selecciona tu fecha de nacimiento usando el calendario</div>
+	
 				<label for="sexo">Sexo</label>
-			</p>
-			<p><input type="radio" value="masculino" name="sexo" id="masculino" checked>Masculino</p>
-			<p><input type="radio" value="femenino" name="sexo" id="femenino">Femenino</p>			
+	
+			<input type="radio" value="masculino" name="sexo" id="masculino" checked>Masculino</input>
+			<input type="radio" value="femenino" name="sexo" id="femenino">Femenino</input>			
 		</fieldset>
 		<p>
 			<button type="submit" id="enviar">Enviar</button>
