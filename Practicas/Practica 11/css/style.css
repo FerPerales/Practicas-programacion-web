@@ -1,4 +1,9 @@
 .error {
 	display: block;
 	visibility: hidden;
+	color: red;
+}
+
+label, input{
+	display: block
 }
