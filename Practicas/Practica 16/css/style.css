@@ -1,0 +1,16 @@
+.affix {
+      top: 20px;
+}
+
+footer{
+	background-color: #000000;
+	color: #FFFFFF;
+	border-radius: 10px;
+	text-align: center;
+	padding: 0.5%;
+}
+
+.hero-unit {
+	background-color: #000000;
+	color: #FFFFFF;
+}
